@@ -67,6 +67,13 @@ public class ProductService {
 		return accountLoginFeignClient.validateHeaderToken(jwtToken);
 		
 	}
+	public Boolean validateProduct(int productId) {
+		// TODO Auto-generated method stub
+		if (productDao.getProduct(productId) != null)
+		return true;
+		else 
+		return false;
+	}
 
 
 }

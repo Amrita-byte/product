@@ -46,4 +46,12 @@ public class ProductDao {
 		return productList;
 	}
 
+	public ProductInfo getProduct(int productId) {
+		// TODO Auto-generated method stub
+		if (productRepo.findById(productId) != null)
+		return productRepo.findById(productId).get();
+		else 
+		return null;
+	}
+
 }

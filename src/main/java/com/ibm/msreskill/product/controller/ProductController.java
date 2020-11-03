@@ -50,5 +50,11 @@ public class ProductController {
 			throws Exception{		
 		return productService.validateHeaderToken(jwtToken);
 	}
+	
+	@RequestMapping(path = "/validateProduct",method = RequestMethod.POST)
+	public Boolean validateProduct(@RequestBody int productId) 
+			throws Exception{		
+		return productService.validateProduct(productId);
+	}
 
 }
